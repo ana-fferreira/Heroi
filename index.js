@@ -1,47 +1,31 @@
-class Heroi {   
-
-  constructor(nome, idade,tipo) {
-      this.nome = nome
-      this.idade = idade
-      this.tipo = tipo
+//calcular idade e definir a categoria para tal idade.
+function calcularIdade(idade) {
 
 
-            }
+
+    let categoria = "";
 
 
-atacar() {
-    let ataque = "";
 
- if (this.tipo === "mago") {
-    ataque = "magia";
+if (idade < 10) {
+   categoria = "Criança";
 
- } else if (this.tipo === "guerreiro") {
-    ataque = "espada";
+} else if (idade < 15) {
+    categoria = "Adolescente";
+  
+} else if (idade < 20) {    
+     categoria = "Jovem";
 
-} else if (this.tipo === "monge") {
-    ataque = "artes marciais";
+} else if (idade < 30) {    
+     categoria = "Adulto";
 
-} else if (this.tipo === "ninja") {
-    ataque = "shuriken";
-} 
-    
+} else { 
+    categoria = "Idoso";
 
-      console.log(`O ${this.tipo} atacou usando ${ataque}`);
-
-     }
+    }
+console.log(`Você esta na categoria de ${categoria}`);
 }
+    calcularIdade (20);
 
-   let herois = [
-      new Heroi("Muo", 50, "mago"),
-      new Heroi("Mio", 60, "guerreiro"),
-      new Heroi("Mao", 70, "monge"),
-      new Heroi("Mpo", 80, "ninja")
 
-   ];
 
-       for (let heroi of herois) {
- heroi.atacar();
-
-       }
-      
-    
